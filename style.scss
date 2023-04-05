@@ -1,0 +1,275 @@
+// google font
+
+// general style
+:root {
+  // ### Primary
+  --White: hsl(0, 0%, 100%);
+  --Strong-Cyan: rgb(38, 186, 164);
+  --Light-Blue: hsl(233, 100%, 69%);
+
+  // ### Neutral
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+  --footer-bg: hsl(220, 18%, 97%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+  color: var(--Dark-Grayish-Blue);
+}
+
+p {
+  color: var(--Grayish-Blue);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+#root {
+  max-width: 90rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section,
+header,
+footer {
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+// HEADER //
+header {
+  background: url("/images/bg-header-mobile.png") no-repeat top center / 100%;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+  }
+}
+
+.download-btn {
+  margin-top: 3rem;
+  a {
+    display: block;
+    padding: 1rem;
+    border-radius: 3rem;
+    color: var(--White);
+  }
+
+  a:not(:last-child) {
+    margin-bottom: 1.5rem;
+    background-color: var(--Strong-Cyan);
+    box-shadow: 1px 3px 5px rgba(38, 186, 164, 0.3),
+      -1px -3px 5px rgba(38, 186, 164, 0.3);
+  }
+
+  a:last-child {
+    background-color: var(--Light-Blue);
+    box-shadow: 2px 3px 2px rgba(97, 115, 255, 0.3),
+      -2px -3px 2px rgba(97, 115, 255, 0.3);
+  }
+}
+
+// HERO //
+.hero--title p,
+.access p,
+.workflow > p {
+  margin-bottom: 5rem;
+}
+
+.hero--service_card,
+.workflow--card {
+  margin-top: 3rem;
+}
+
+// SECTION WORKFLOW //
+.workflow--card img {
+  width: 2rem;
+  height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// BRAND ICON //
+.brands-icons img {
+  display: block;
+  object-fit: contain;
+  width: 7rem;
+  margin-inline: auto;
+}
+
+.brands-icons img:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+// APP DOWNLOAD //
+.app--download {
+  padding-bottom: 6rem;
+}
+
+// FOOTER //
+footer {
+  padding-top: 2rem;
+  background-color: var(--footer-bg);
+}
+
+.footer--logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.footer--links {
+  margin-block: 3rem;
+}
+
+.links {
+  li {
+    margin-top: 1.5rem;
+  }
+  a {
+    color: var(--Dark-Grayish-Blue);
+  }
+}
+
+.footer--socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  section,
+  header,
+  footer {
+    padding-inline: 3rem;
+  }
+}
+
+@media screen and (min-width: 55rem) {
+  section,
+  header,
+  footer {
+    padding-inline: 6rem;
+  }
+
+  //   HEADER //
+  header {
+    background: url("/images/bg-header-desktop.png") no-repeat top center / 100%;
+  }
+
+  header img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      padding: 10px 20px;
+    }
+
+    a:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  // HERO CONTENT //
+  .hero--content {
+    display: flex;
+  }
+
+  .hero--img {
+    flex-shrink: 0;
+  }
+
+  .hero--img img {
+    height: 100%;
+    width: 100%;
+    margin-left: -13rem;
+  }
+
+  .hero .hero--service_card {
+    text-align: left;
+  }
+
+  // WORK FLOW //
+
+  .workflow--cards_container,
+  .brands-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .workflow--card {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  // BRAND ICON //
+  .brands-icons img:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  //   FOOTER //
+  footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer--logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .footer--links {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .links {
+    li {
+      margin-top: 1rem;
+    }
+  }
+}
